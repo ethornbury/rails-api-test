@@ -1,0 +1,15 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<!-- show the content in the html page -->
+<%= @response %>
+ <hr />
+
+<%= @categories %>
+
+<% @categories.each do |cat| %>
+    <p><%= cat %> </p>
+<% end %>
+
+<% @cat_facts.each do |fact| %>
+    <p><%= fact %> </p>
+<% end %>
