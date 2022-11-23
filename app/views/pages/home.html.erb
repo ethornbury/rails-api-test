@@ -1,17 +1,27 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <!-- show the content in the html page -->
-<%= @response %>
+
+<%#= @nyt_data %>
+<hr />
+
+    <% @nyt_data['results']['books'].each do |child| %>
+        <p><%= child['title'] %> </p>
+        <p><%= child %> </p>
+    <% end %>
+<hr />
+
+<%#= @response %>
  <hr />
 
-<%= @categories %>
-
+<%#= @categories %>
+<hr />
 <% @categories.each do |cat| %>
-    <p><%= cat %> </p>
+    <p><%#= cat %> </p>
 <% end %>
 
-<%= @cat_facts %> <!-- all cats info -->
+<%#= @cat_facts %> <!-- all cats info -->
 
 <% @cat_facts.each do |fact| %>
-    <p><%= fact %> </p>
+    <p><%#= fact %> </p>
 <% end %>
